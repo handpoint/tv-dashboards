@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Boundary Dashboard Rotator</title>
+    <style type="text/css">
+        html, body {
+            /*this css ensures the iframe is maximised in the window */
+            background:#000
+            overflow: hidden;
+            margin: auto;
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+
+    <script>
+        function frameRotator(){
+            //edit this array with your embed links (take the URL only, not the whole iframe link provided!)
+//            var urls = ['https://premium.boundary.com/embed/e.3a61c096f8?d-w=2&d-h=1&d-pad=5&d-bg=000000&d-sg-reqcount=0-0-1-1&d-sg-reqresptime=1-0-1-1#null',
+//                'https://premium.boundary.com/embed/e.3a61c096f8?d-w=3&d-h=1&d-pad=5&d-bg=000000&d-sg-cpu=0-0-1-1&d-sg-mem=1-0-1-1&d-sg-hdr=2-0-1-1-t&d-sg-hdw=2-0-1-1-b#null'];
+            var pos = 0;
+            nextDashboard();
+            setInterval(next, 10000); // every 10 seconds, switch to whatever you need.
+            function nextDashboard()
+            {
+                if(pos == urls.length) pos = 0; // reset the counter
+                document.getElementById('rotate').src = global_urls[pos];
+                pos++;
+            }
+        }
+    </script>
+</head>
+{{ content }}
+<body onload="frameRotator()">
+    <iframe id="rotate" width="100%" height="100%" frameborder="0"></iframe>
+</body>
+</html>
