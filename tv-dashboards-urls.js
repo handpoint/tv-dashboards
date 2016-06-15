@@ -9,6 +9,7 @@ var Left_TV_URLS = [
     'https://www.handpoint.com/tools/dashboards/world-map-dashboard.html',
     'https://www.handpoint.com/tools/dashboards/monthly.transactions.html',
     'https://www.handpoint.com/tools/dashboards/monthly.amount.html'
+    
 ];
 
 var Right_TV_URLS = [
