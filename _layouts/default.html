@@ -5,7 +5,7 @@
     <style type="text/css">
         html, body {
             /*this css ensures the iframe is maximised in the window */
-            background:#000
+            background:#000;
             overflow: hidden;
             margin: auto;
             height: 100%;
@@ -20,7 +20,7 @@
 //                'https://premium.boundary.com/embed/e.3a61c096f8?d-w=3&d-h=1&d-pad=5&d-bg=000000&d-sg-cpu=0-0-1-1&d-sg-mem=1-0-1-1&d-sg-hdr=2-0-1-1-t&d-sg-hdw=2-0-1-1-b#null'];
             var pos = 0;
             nextDashboard();
-            setInterval(next, 10000); // every 10 seconds, switch to whatever you need.
+            setInterval(nextDashboard, 10000); // every 10 seconds, switch to whatever you need.
             function nextDashboard()
             {
                 if(pos == global_urls.length) pos = 0; // reset the counter
